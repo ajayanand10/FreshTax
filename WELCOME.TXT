@@ -1,0 +1,27 @@
+This is a sample 'per project' template.
+
+Templates doc: http://www.jaxio.com/documentation/celerio/templates.html
+
+Here is a simple script:
+
+    ${entity.model.type}: InvGstr1
+    ${entity.model.var}: invGstr1
+    ${entity.model.getter}: getInvGstr1
+    ${entity.service.type}: InvGstr1Service
+    ${entity.service.var}: invGstr1Service
+    ${entity.service.getter}: getInvGstr1Service
+
+    ${entity.model.type}: InvItemGstr1
+    ${entity.model.var}: invItemGstr1
+    ${entity.model.getter}: getInvItemGstr1
+    ${entity.service.type}: InvItemGstr1Service
+    ${entity.service.var}: invItemGstr1Service
+    ${entity.service.getter}: getInvItemGstr1Service
+
+    ${entity.model.type}: User
+    ${entity.model.var}: user
+    ${entity.model.getter}: getUser
+    ${entity.service.type}: UserService
+    ${entity.service.var}: userService
+    ${entity.service.getter}: getUserService
+

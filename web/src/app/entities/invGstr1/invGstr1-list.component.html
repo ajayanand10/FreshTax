@@ -1,0 +1,208 @@
+<div class="ContentSideSections Implementation">
+    <md-card *ngIf="!sub">
+        <md-card-title>Search InvGstr1 with search criterias</md-card-title>
+        <md-card-content>
+        <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" ngForm #invGstr1Form="ngForm">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="gstin">Gstin</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="gstin" [(ngModel)]="example.gstin" name="gstin" #gstin="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="state">State</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="state" [(ngModel)]="example.state" name="state" #state="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="flag">Flag</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="flag" [(ngModel)]="example.flag" name="flag" #flag="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="chksum">Chksum</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="chksum" [(ngModel)]="example.chksum" name="chksum" #chksum="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="inum">Inum</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="inum" [(ngModel)]="example.inum" name="inum" #inum="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="invRef">Inv Ref</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="invRef" [(ngModel)]="example.invRef" name="invRef" #invRef="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="invTyp">Inv Typ</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="invTyp" [(ngModel)]="example.invTyp" name="invTyp" #invTyp="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="rchrg">Rchrg</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="rchrg" [(ngModel)]="example.rchrg" name="rchrg" #rchrg="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="proAst">Pro Ast</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="proAst" [(ngModel)]="example.proAst" name="proAst" #proAst="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="terms">Terms</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="terms" [(ngModel)]="example.terms" name="terms" #terms="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="orNo">Or No</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="orNo" [(ngModel)]="example.orNo" name="orNo" #orNo="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="etin">Etin</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="etin" [(ngModel)]="example.etin" name="etin" #etin="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="ctin">Ctin</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="ctin" [(ngModel)]="example.ctin" name="ctin" #ctin="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="pos">Pos</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="pos" [(ngModel)]="example.pos" name="pos" #pos="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="cusNotes">Cus Notes</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="cusNotes" [(ngModel)]="example.cusNotes" name="cusNotes" #cusNotes="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="tnc">Tnc</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="tnc" [(ngModel)]="example.tnc" name="tnc" #tnc="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="supType">Sup Type</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="supType" [(ngModel)]="example.supType" name="supType" #supType="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="ftInvProcessed">Ft Inv Processed</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="ftInvProcessed" [(ngModel)]="example.ftInvProcessed" name="ftInvProcessed" #ftInvProcessed="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="ftInvEdit">Ft Inv Edit</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="ftInvEdit" [(ngModel)]="example.ftInvEdit" name="ftInvEdit" #ftInvEdit="ngModel"/>
+                </div>
+            </div>
+        </div>
+
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button (click)="search(dt)"><md-icon>search</md-icon>Search</button>
+        </md-card-actions>
+    </md-card>
+
+    <br/>
+    <md-card>
+    <md-card-content>
+    <p>The list of results below is server-side paginated...</p>
+
+    <p-dataTable #dt [value]="currentPage.content"
+                 [lazy]="true"
+                 [rows]="10"
+                 [paginator]="currentPage.totalElements > 10"
+                 [totalRecords]="currentPage.totalElements"
+                 (onLazyLoad)="loadPage($event)"
+                 selectionMode="single"
+                 (onRowSelect)="onRowSelect($event)"
+                 [rowsPerPageOptions]="[5,10,20,50,100]"
+                 [responsive]="true">
+        <p-header>{{header}} (count: {{currentPage.totalElements}})</p-header>
+        <p-column field="gstin" header="Gstin" sortable="true">
+        </p-column>
+        <p-column field="state" header="State" sortable="true">
+        </p-column>
+        <p-column field="flag" header="Flag" sortable="true">
+        </p-column>
+        <p-column field="chksum" header="Chksum" sortable="true">
+        </p-column>
+        <p-column field="inum" header="Inum" sortable="true">
+        </p-column>
+        <p-column field="idt" header="Idt" sortable="true">
+            <ng-template let-invGstr1="rowData" pTemplate="body">
+                {{invGstr1.idt | date:"yyyy-MM-dd" }}
+            </ng-template>
+        </p-column>
+        <p-column styleClass="col-icon">
+            <ng-template let-invGstr1="rowData" pTemplate="body">
+                <button type="button" pButton icon="fa-trash" (click)="showDeleteDialog(invGstr1)" style="float:left"></button>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+    </md-card-content>
+    <md-card-actions>
+        <button md-raised-button (click)="addNew()"><md-icon>add</md-icon>Add</button>
+    </md-card-actions>
+    </md-card>
+</div>

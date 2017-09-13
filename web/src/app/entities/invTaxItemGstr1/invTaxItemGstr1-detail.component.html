@@ -1,0 +1,173 @@
+    <md-card *ngIf="invTaxItemGstr1" ngForm #invTaxItemGstr1Form="ngForm">
+        <md-card-title>InvTaxItemGstr1 Details</md-card-title>
+        <md-card-content>
+        <div class="ui-g alignlabels">
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="num" >Num</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="num" type="number" [(ngModel)]="invTaxItemGstr1.num"  name="num" #num="ngModel" />
+                    
+                </md-input-container>
+                </div>
+             <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="inv">Inv</label></div>
+            <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <div class="ui-g">
+                <div class="ui-g-12 ui-md-5 ui-lg-5">
+                    <invGstr1-auto-complete [(ngModel)]="invTaxItemGstr1.inv" id="inv" name="inv" [disabled]="sub"></invGstr1-auto-complete>
+                </div>
+                <div class="ui-g-12 ui-md-2 ui-lg-2">
+                    <button pButton id="gotoInv" type="button" (click)="gotoInv()" *ngIf="!sub && invTaxItemGstr1.inv" icon="fa-pencil" label="Edit"></button>
+                </div>
+                <div class="ui-g-12 ui-md-2 ui-lg-2">
+                    <button pButton id="clearInv" type="button" (click)="clearInv()" *ngIf="!sub && invTaxItemGstr1.inv" icon="fa-chain-broken" label="Clear"></button>
+                </div>
+                </div>
+            </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="rt" >Rt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="rt" type="text" [(ngModel)]="invTaxItemGstr1.rt"   name="rt" #rt="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="txval" >Txval</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="txval" type="text" [(ngModel)]="invTaxItemGstr1.txval"   name="txval" #txval="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="iamt" >Iamt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="iamt" type="text" [(ngModel)]="invTaxItemGstr1.iamt"   name="iamt" #iamt="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itIpct" >It Ipct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itIpct" type="text" [(ngModel)]="invTaxItemGstr1.itIpct"   name="itIpct" #itIpct="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="camt" >Camt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="camt" type="text" [(ngModel)]="invTaxItemGstr1.camt"   name="camt" #camt="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCpct" >It Cpct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCpct" type="text" [(ngModel)]="invTaxItemGstr1.itCpct"   name="itCpct" #itCpct="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="samt" >Samt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="samt" type="text" [(ngModel)]="invTaxItemGstr1.samt"   name="samt" #samt="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itSpct" >It Spct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itSpct" type="text" [(ngModel)]="invTaxItemGstr1.itSpct"   name="itSpct" #itSpct="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="csamt" >Csamt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="csamt" type="text" [(ngModel)]="invTaxItemGstr1.csamt"   name="csamt" #csamt="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCspct" >It Cspct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCspct" type="text" [(ngModel)]="invTaxItemGstr1.itCspct"   name="itCspct" #itCspct="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="rt1" >Rt1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="rt1" type="number" [(ngModel)]="invTaxItemGstr1.rt1"  name="rt1" #rt1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="txval1" >Txval1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="txval1" type="number" [(ngModel)]="invTaxItemGstr1.txval1"  name="txval1" #txval1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="iamt1" >Iamt1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="iamt1" type="number" [(ngModel)]="invTaxItemGstr1.iamt1"  name="iamt1" #iamt1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itIpct1" >It Ipct1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itIpct1" type="number" [(ngModel)]="invTaxItemGstr1.itIpct1"  name="itIpct1" #itIpct1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="camt1" >Camt1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="camt1" type="number" [(ngModel)]="invTaxItemGstr1.camt1"  name="camt1" #camt1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCpct1" >It Cpct1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCpct1" type="number" [(ngModel)]="invTaxItemGstr1.itCpct1"  name="itCpct1" #itCpct1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="samt1" >Samt1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="samt1" type="number" [(ngModel)]="invTaxItemGstr1.samt1"  name="samt1" #samt1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itSpct1" >It Spct1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itSpct1" type="number" [(ngModel)]="invTaxItemGstr1.itSpct1"  name="itSpct1" #itSpct1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="csamt1" >Csamt1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="csamt1" type="number" [(ngModel)]="invTaxItemGstr1.csamt1"  name="csamt1" #csamt1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCspct1" >It Cspct1</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCspct1" type="number" [(ngModel)]="invTaxItemGstr1.itCspct1"  name="itCspct1" #itCspct1="ngModel" />
+                    
+                </md-input-container>
+                </div>
+          </div>
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button *ngIf="sub" (click)="onCancel()"><md-icon>cancel</md-icon>Cancel</button>
+            <button md-raised-button (click)="onSave()" [disabled]="!invTaxItemGstr1Form.form.valid"><md-icon>save</md-icon>Save</button>
+        </md-card-actions>
+    </md-card>
+

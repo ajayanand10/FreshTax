@@ -1,0 +1,176 @@
+    <md-card *ngIf="invGstr1" ngForm #invGstr1Form="ngForm">
+        <md-card-title>InvGstr1 Details</md-card-title>
+        <md-card-content>
+        <div class="ui-g alignlabels">
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="gstin" >Gstin</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="gstin" type="text" [(ngModel)]="invGstr1.gstin"   name="gstin" #gstin="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="state" >State</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="state" type="text" [(ngModel)]="invGstr1.state"   name="state" #state="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="flag" >Flag</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="flag" type="text" [(ngModel)]="invGstr1.flag"   name="flag" #flag="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="chksum" >Chksum</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="chksum" type="text" [(ngModel)]="invGstr1.chksum"   name="chksum" #chksum="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="inum" >Inum</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="inum" type="text" [(ngModel)]="invGstr1.inum"   name="inum" #inum="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="idt" >Idt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container>
+                  <input mdInput id="idt" [mdDatepicker]="idtPicker" [(ngModel)]="invGstr1.idt"  name="idt" #idt="ngModel">
+                  <button mdSuffix [mdDatepickerToggle]="idtPicker"></button>
+                </md-input-container>
+                <md-datepicker #idtPicker></md-datepicker>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="invRef" >Inv Ref</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="invRef" type="text" [(ngModel)]="invGstr1.invRef"   name="invRef" #invRef="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="invTyp" >Inv Typ</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="invTyp" type="text" [(ngModel)]="invGstr1.invTyp"   name="invTyp" #invTyp="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="invDue" >Inv Due</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container>
+                  <input mdInput id="invDue" [mdDatepicker]="invDuePicker" [(ngModel)]="invGstr1.invDue"  name="invDue" #invDue="ngModel">
+                  <button mdSuffix [mdDatepickerToggle]="invDuePicker"></button>
+                </md-input-container>
+                <md-datepicker #invDuePicker></md-datepicker>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="rchrg" >Rchrg</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="rchrg" type="text" [(ngModel)]="invGstr1.rchrg"   name="rchrg" #rchrg="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="proAst" >Pro Ast</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="proAst" type="text" [(ngModel)]="invGstr1.proAst"   name="proAst" #proAst="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="terms" >Terms</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <textarea mdInput id="terms" [(ngModel)]="invGstr1.terms"   autoResize="true" name="terms" #terms="ngModel"></textarea>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="orNo" >Or No</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <textarea mdInput id="orNo" [(ngModel)]="invGstr1.orNo"   autoResize="true" name="orNo" #orNo="ngModel"></textarea>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="orDt" >Or Dt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container>
+                  <input mdInput id="orDt" [mdDatepicker]="orDtPicker" [(ngModel)]="invGstr1.orDt"  name="orDt" #orDt="ngModel">
+                  <button mdSuffix [mdDatepickerToggle]="orDtPicker"></button>
+                </md-input-container>
+                <md-datepicker #orDtPicker></md-datepicker>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="etin" >Etin</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="etin" type="text" [(ngModel)]="invGstr1.etin"   name="etin" #etin="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="ctin" >Ctin</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="ctin" type="text" [(ngModel)]="invGstr1.ctin"   name="ctin" #ctin="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="pos" >Pos</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="pos" type="text" [(ngModel)]="invGstr1.pos"   name="pos" #pos="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="cusNotes" >Cus Notes</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <textarea mdInput id="cusNotes" [(ngModel)]="invGstr1.cusNotes"   autoResize="true" name="cusNotes" #cusNotes="ngModel"></textarea>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="tnc" >Tnc</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <textarea mdInput id="tnc" [(ngModel)]="invGstr1.tnc"   autoResize="true" name="tnc" #tnc="ngModel"></textarea>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="val" >Val</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="val" type="number" [(ngModel)]="invGstr1.val"  name="val" #val="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="supType" >Sup Type</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="supType" type="text" [(ngModel)]="invGstr1.supType"   name="supType" #supType="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="ftInvProcessed" >Ft Inv Processed</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="ftInvProcessed" type="text" [(ngModel)]="invGstr1.ftInvProcessed"   name="ftInvProcessed" #ftInvProcessed="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="ftInvEdit" >Ft Inv Edit</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="ftInvEdit" type="text" [(ngModel)]="invGstr1.ftInvEdit"   name="ftInvEdit" #ftInvEdit="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+          </div>
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button *ngIf="sub" (click)="onCancel()"><md-icon>cancel</md-icon>Cancel</button>
+            <button md-raised-button (click)="onSave()" [disabled]="!invGstr1Form.form.valid"><md-icon>save</md-icon>Save</button>
+        </md-card-actions>
+    </md-card>
+

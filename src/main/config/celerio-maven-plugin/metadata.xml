@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.jaxio.com/schema/celerio">
+  <jdbcConnectivity driver="org.postgresql.Driver" url="jdbc:postgresql://freshtax.cp6hezsl8fgs.ap-south-1.rds.amazonaws.com:5432/freshtax" user="root" password="freshtax123" schemaName="devfreshtax" oracleRetrieveRemarks="false" oracleRetrieveSynonyms="true" reverseIndexes="true" reverseOnlyUniqueIndexes="true" catalog="">
+    <tableNamePatterns/>
+    <tableTypes>
+      <tableType>TABLE</tableType>
+    </tableTypes>
+  </jdbcConnectivity>
+  <databaseInfo databaseMajorVersion="9" databaseMinorVersion="6" databaseProductName="PostgreSQL" databaseProductVersion="9.6.2" driverMajorVersion="42" driverMinorVersion="1" driverName="PostgreSQL JDBC Driver" driverVersion="42.1.4" extraInfo=""/>
+  <tables>
+    <table name="inv_gstr_1" type="TABLE" schemaName="devfreshtax">
+      <columns>
+        <column name="inv_id" columnDef="nextval('devfreshtax.inv_gstr_1_id_seq'::regclass)" decimalDigits="0" autoIncrement="true" nullable="false" ordinalPosition="1" size="19" type="BIGINT"/>
+        <column name="gstin" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="2" size="15" type="VARCHAR"/>
+        <column name="state" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="3" size="2" type="VARCHAR"/>
+        <column name="flag" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="4" size="1" type="CHAR"/>
+        <column name="chksum" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="5" size="64" type="VARCHAR"/>
+        <column name="inum" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="6" size="16" type="VARCHAR"/>
+        <column name="idt" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="7" size="13" type="DATE"/>
+        <column name="inv_ref" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="8" size="100" type="VARCHAR"/>
+        <column name="inv_typ" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="9" size="5" type="VARCHAR"/>
+        <column name="inv_due" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="10" size="13" type="DATE"/>
+        <column name="rchrg" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="11" size="1" type="CHAR"/>
+        <column name="pro_ast" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="12" size="1" type="CHAR"/>
+        <column name="terms" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="13" size="2147483647" type="VARCHAR"/>
+        <column name="or_no" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="14" size="2147483647" type="VARCHAR"/>
+        <column name="or_dt" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="15" size="13" type="DATE"/>
+        <column name="etin" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="16" size="15" type="VARCHAR"/>
+        <column name="ctin" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="17" size="15" type="VARCHAR"/>
+        <column name="pos" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="18" size="2" type="VARCHAR"/>
+        <column name="cus_notes" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="19" size="2147483647" type="VARCHAR"/>
+        <column name="tnc" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="20" size="2147483647" type="VARCHAR"/>
+        <column name="val" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="21" size="131089" type="NUMERIC"/>
+        <column name="sup_type" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="22" size="10" type="VARCHAR"/>
+        <column name="ft_inv_processed" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="23" size="1" type="VARCHAR"/>
+        <column name="ft_inv_edit" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="24" size="1" type="VARCHAR"/>
+      </columns>
+      <indexes>
+        <indexe columnName="inv_id" indexName="inv_gstr_1_pkey" nonUnique="false"/>
+      </indexes>
+      <importedKeys/>
+      <primaryKeys>
+        <primaryKey>inv_id</primaryKey>
+      </primaryKeys>
+    </table>
+    <table name="inv_item_gstr_1" type="TABLE" schemaName="devfreshtax">
+      <columns>
+        <column name="inv_id" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="1" size="19" type="BIGINT"/>
+        <column name="ini_sno" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="2" size="19" type="BIGINT"/>
+        <column name="item_desc" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="3" size="2147483647" type="VARCHAR"/>
+        <column name="item_typ" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="4" size="10" type="VARCHAR"/>
+        <column name="hsn" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="5" size="64" type="VARCHAR"/>
+        <column name="qty" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="6" size="131089" type="NUMERIC"/>
+        <column name="uom" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="7" size="10" type="VARCHAR"/>
+        <column name="rate" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="8" size="11" type="NUMERIC"/>
+        <column name="disc" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="9" size="11" type="NUMERIC"/>
+        <column name="it_txval" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="10" size="11" type="NUMERIC"/>
+        <column name="it_rt" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="11" size="11" type="NUMERIC"/>
+        <column name="it_cpct" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="12" size="3" type="NUMERIC"/>
+        <column name="it_camt" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="13" size="11" type="NUMERIC"/>
+        <column name="it_spct" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="14" size="3" type="NUMERIC"/>
+        <column name="it_samt" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="15" size="11" type="NUMERIC"/>
+        <column name="it_ipct" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="16" size="3" type="NUMERIC"/>
+        <column name="it_iamt" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="17" size="11" type="NUMERIC"/>
+        <column name="it_cspct" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="18" size="3" type="NUMERIC"/>
+        <column name="it_csamt" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="19" size="11" type="NUMERIC"/>
+        <column name="it_total" decimalDigits="2" autoIncrement="false" nullable="true" ordinalPosition="20" size="11" type="NUMERIC"/>
+        <column name="ini_id" columnDef="nextval('devfreshtax.inv_item_gstr_1_ini_id_seq'::regclass)" decimalDigits="0" autoIncrement="true" nullable="false" ordinalPosition="21" size="19" type="BIGINT"/>
+      </columns>
+      <indexes>
+        <indexe columnName="ini_id" indexName="inv_item_gstr_1_pkey" nonUnique="false"/>
+      </indexes>
+      <importedKeys>
+        <importedKey fkColumnName="inv_id" fkName="inv_item_ini_id_fk" pkColumnName="inv_id" pkTableName="inv_gstr_1" pkTableSchema="devfreshtax"/>
+      </importedKeys>
+      <primaryKeys>
+        <primaryKey>ini_id</primaryKey>
+      </primaryKeys>
+    </table>
+    
+    <table name="user" type="TABLE" schemaName="devfreshtax">
+      <columns>
+        <column name="id" columnDef="nextval('user_seq'::regclass)" decimalDigits="0" autoIncrement="true" nullable="false" ordinalPosition="1" size="10" type="INTEGER"/>
+        <column name="login" decimalDigits="0" autoIncrement="false" nullable="false" ordinalPosition="2" size="100" type="VARCHAR"/>
+        <column name="password" decimalDigits="0" autoIncrement="false" nullable="false" ordinalPosition="3" size="100" type="VARCHAR"/>
+        <column name="email" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="4" size="100" type="VARCHAR"/>
+        <column name="is_enabled" columnDef="true" decimalDigits="0" autoIncrement="false" nullable="false" ordinalPosition="5" size="1" type="BIT"/>
+        <column name="civility" columnDef="'MR'::bpchar" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="6" size="2" type="CHAR"/>
+        <column name="country_code" columnDef="'+33'::character varying" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="7" size="6" type="VARCHAR"/>
+        <column name="first_name" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="8" size="100" type="VARCHAR"/>
+        <column name="last_name" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="9" size="100" type="VARCHAR"/>
+        <column name="creation_date" columnDef="now()" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="10" size="22" type="TIMESTAMP"/>
+        <column name="creation_author" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="11" size="200" type="VARCHAR"/>
+        <column name="last_modification_date" columnDef="now()" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="12" size="22" type="TIMESTAMP"/>
+        <column name="last_modification_author" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="13" size="200" type="VARCHAR"/>
+        <column name="version" columnDef="0" decimalDigits="0" autoIncrement="false" nullable="true" ordinalPosition="14" size="10" type="INTEGER"/>
+      </columns>
+      <indexes>
+        <indexe columnName="id" indexName="user_pkey" nonUnique="false"/>
+        <indexe columnName="login" indexName="user_unique_1" nonUnique="false"/>
+      </indexes>
+      <importedKeys/>
+      <primaryKeys>
+        <primaryKey>id</primaryKey>
+      </primaryKeys>
+    </table>
+  </tables>
+</metadata>

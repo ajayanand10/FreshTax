@@ -1,0 +1,93 @@
+<div class="ContentSideSections Implementation">
+    <md-card *ngIf="!sub">
+        <md-card-title>Search InvItemGstr1 with search criterias</md-card-title>
+        <md-card-content>
+        <div class="ui-grid ui-grid-responsive ui-fluid ui-grid-pad" ngForm #invItemGstr1Form="ngForm">
+<div class="ui-grid-row">
+    <div class="ui-grid-col-2">
+        <label for="inv">Inv</label>
+    </div>
+    <div class="ui-grid-col-6">
+        <invGstr1-auto-complete [(ngModel)]="example.inv" id="inv" name="inv"></invGstr1-auto-complete>
+    </div>
+</div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="itemDesc">Item Desc</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="itemDesc" [(ngModel)]="example.itemDesc" name="itemDesc" #itemDesc="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="itemTyp">Item Typ</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="itemTyp" [(ngModel)]="example.itemTyp" name="itemTyp" #itemTyp="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="hsn">Hsn</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="hsn" [(ngModel)]="example.hsn" name="hsn" #hsn="ngModel"/>
+                </div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-2">
+                    <label for="uom">Uom</label>
+                </div>
+                <div class="ui-grid-col-6">
+                    <input pInputText id="uom" [(ngModel)]="example.uom" name="uom" #uom="ngModel"/>
+                </div>
+            </div>
+        </div>
+
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button (click)="search(dt)"><md-icon>search</md-icon>Search</button>
+        </md-card-actions>
+    </md-card>
+
+    <br/>
+    <md-card>
+    <md-card-content>
+    <p>The list of results below is server-side paginated...</p>
+
+    <p-dataTable #dt [value]="currentPage.content"
+                 [lazy]="true"
+                 [rows]="10"
+                 [paginator]="currentPage.totalElements > 10"
+                 [totalRecords]="currentPage.totalElements"
+                 (onLazyLoad)="loadPage($event)"
+                 selectionMode="single"
+                 (onRowSelect)="onRowSelect($event)"
+                 [rowsPerPageOptions]="[5,10,20,50,100]"
+                 [responsive]="true">
+        <p-header>{{header}} (count: {{currentPage.totalElements}})</p-header>
+        <p-column field="iniSno" header="Ini Sno" sortable="true">
+        </p-column>
+        <p-column field="itemDesc" header="Item Desc" sortable="true">
+        </p-column>
+        <p-column field="itemTyp" header="Item Typ" sortable="true">
+        </p-column>
+        <p-column field="hsn" header="Hsn" sortable="true">
+        </p-column>
+        <p-column field="qty" header="Qty" sortable="true">
+        </p-column>
+        <p-column field="uom" header="Uom" sortable="true">
+        </p-column>
+        <p-column styleClass="col-icon">
+            <ng-template let-invItemGstr1="rowData" pTemplate="body">
+                <button type="button" pButton icon="fa-trash" (click)="showDeleteDialog(invItemGstr1)" style="float:left"></button>
+            </ng-template>
+        </p-column>
+    </p-dataTable>
+    </md-card-content>
+    <md-card-actions>
+        <button md-raised-button (click)="addNew()"><md-icon>add</md-icon>Add</button>
+    </md-card-actions>
+    </md-card>
+</div>

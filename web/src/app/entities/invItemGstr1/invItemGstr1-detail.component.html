@@ -1,0 +1,159 @@
+    <md-card *ngIf="invItemGstr1" ngForm #invItemGstr1Form="ngForm">
+        <md-card-title>InvItemGstr1 Details</md-card-title>
+        <md-card-content>
+        <div class="ui-g alignlabels">
+            <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="inv">Inv</label></div>
+            <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <div class="ui-g">
+                <div class="ui-g-12 ui-md-5 ui-lg-5">
+                    <invGstr1-auto-complete [(ngModel)]="invItemGstr1.inv" id="inv" name="inv" [disabled]="sub"></invGstr1-auto-complete>
+                </div>
+                <div class="ui-g-12 ui-md-2 ui-lg-2">
+                    <button pButton id="gotoInv" type="button" (click)="gotoInv()" *ngIf="!sub && invItemGstr1.inv" icon="fa-pencil" label="Edit"></button>
+                </div>
+                <div class="ui-g-12 ui-md-2 ui-lg-2">
+                    <button pButton id="clearInv" type="button" (click)="clearInv()" *ngIf="!sub && invItemGstr1.inv" icon="fa-chain-broken" label="Clear"></button>
+                </div>
+                </div>
+            </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="iniSno" >Ini Sno</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="iniSno" type="number" [(ngModel)]="invItemGstr1.iniSno"  name="iniSno" #iniSno="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itemDesc" >Item Desc</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <textarea mdInput id="itemDesc" [(ngModel)]="invItemGstr1.itemDesc"   autoResize="true" name="itemDesc" #itemDesc="ngModel"></textarea>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itemTyp" >Item Typ</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itemTyp" type="text" [(ngModel)]="invItemGstr1.itemTyp"   name="itemTyp" #itemTyp="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="hsn" >Hsn</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="hsn" type="text" [(ngModel)]="invItemGstr1.hsn"   name="hsn" #hsn="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="qty" >Qty</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="qty" type="number" [(ngModel)]="invItemGstr1.qty"  name="qty" #qty="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="uom" >Uom</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="uom" type="text" [(ngModel)]="invItemGstr1.uom"   name="uom" #uom="ngModel"/>
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="rate" >Rate</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="rate" type="number" [(ngModel)]="invItemGstr1.rate"  name="rate" #rate="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="disc" >Disc</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="disc" type="number" [(ngModel)]="invItemGstr1.disc"  name="disc" #disc="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itTxval" >It Txval</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itTxval" type="number" [(ngModel)]="invItemGstr1.itTxval"  name="itTxval" #itTxval="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itRt" >It Rt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itRt" type="number" [(ngModel)]="invItemGstr1.itRt"  name="itRt" #itRt="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCpct" >It Cpct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCpct" type="number" [(ngModel)]="invItemGstr1.itCpct"  name="itCpct" #itCpct="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCamt" >It Camt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCamt" type="number" [(ngModel)]="invItemGstr1.itCamt"  name="itCamt" #itCamt="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itSpct" >It Spct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itSpct" type="number" [(ngModel)]="invItemGstr1.itSpct"  name="itSpct" #itSpct="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itSamt" >It Samt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itSamt" type="number" [(ngModel)]="invItemGstr1.itSamt"  name="itSamt" #itSamt="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itIpct" >It Ipct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itIpct" type="number" [(ngModel)]="invItemGstr1.itIpct"  name="itIpct" #itIpct="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itIamt" >It Iamt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itIamt" type="number" [(ngModel)]="invItemGstr1.itIamt"  name="itIamt" #itIamt="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCspct" >It Cspct</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCspct" type="number" [(ngModel)]="invItemGstr1.itCspct"  name="itCspct" #itCspct="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itCsamt" >It Csamt</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itCsamt" type="number" [(ngModel)]="invItemGstr1.itCsamt"  name="itCsamt" #itCsamt="ngModel" />
+                    
+                </md-input-container>
+                </div>
+                 <div class="ui-g-12 ui-md-2 ui-lg-1"><label for="itTotal" >It Total</label></div>
+                <div class="ui-g-12 ui-md-10 ui-lg-5">
+                <md-input-container style="width: 90%">
+                    <input mdInput id="itTotal" type="number" [(ngModel)]="invItemGstr1.itTotal"  name="itTotal" #itTotal="ngModel" />
+                    
+                </md-input-container>
+                </div>
+           </div>
+        </md-card-content>
+        <md-card-actions>
+            <button md-raised-button *ngIf="sub" (click)="onCancel()"><md-icon>cancel</md-icon>Cancel</button>
+            <button md-raised-button (click)="onSave()" [disabled]="!invItemGstr1Form.form.valid"><md-icon>save</md-icon>Save</button>
+        </md-card-actions>
+    </md-card>
+
