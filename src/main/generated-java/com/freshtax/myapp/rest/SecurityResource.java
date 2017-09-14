@@ -27,4 +27,9 @@ public class SecurityResource {
     public boolean isAuthenticated() {
         return UserContext.getId() != null;
     }
+    
+    @RequestMapping(value = "/", method = GET, produces = APPLICATION_JSON_VALUE)
+    public String isOK() {
+        return "Service Running OK";
+    }
 }
